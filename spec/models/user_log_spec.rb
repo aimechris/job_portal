@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe UserLog, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  # Association test
+  it { should belong_to(:user_account) }
+  # Validation tests
+  it { should validate_presence_of(:last_login_date) }
+  it { should validate_presence_of(:last_job_apply_date) }
+  
 end
