@@ -6,9 +6,9 @@ class CreateEducationDetails < ActiveRecord::Migration[5.1]
       t.string :major, :limit => 50
       t.string :institute_university_name, :limit =>50
       t.date :starting_date
-      t.date :completion_date
-      t.integer :percentage, null: true
-      t.integer :cgpa, null: true
+      t.date :completion_date, null: true
+      t.integer :percentage, :limit => 8, null: true
+      t.integer :cgpa, :limit => 8, null: true
       t.timestamps
     end
   end
