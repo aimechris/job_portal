@@ -6,7 +6,7 @@ class CreateCompanies < ActiveRecord::Migration[5.1]
       t.references :business_stream
       t.date :establishment_date
       t.string :company_website_url, :limit => 500
-      
+
       t.timestamps
     end
   end

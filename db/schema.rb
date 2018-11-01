@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181031064948) do
+ActiveRecord::Schema.define(version: 20181101162009) do
 
   create_table "business_streams", force: :cascade do |t|
     t.string "business_stream_name", limit: 100
@@ -62,6 +62,8 @@ ActiveRecord::Schema.define(version: 20181031064948) do
     t.text "description", limit: 4000
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_account_id"
+    t.index ["user_account_id"], name: "index_experience_details_on_user_account_id"
   end
 
   create_table "job_locations", force: :cascade do |t|

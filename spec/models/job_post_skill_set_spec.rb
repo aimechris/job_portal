@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe JobPostSkillSet, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  # Associations Test
+  it { should belong_to (:job_post) }
+  it { should belong_to (:skill_set)}
+  # Validations Test
+  it { should validate_presence_of (:skill_level)}
 end
