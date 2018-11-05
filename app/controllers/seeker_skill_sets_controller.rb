@@ -1,0 +1,2 @@
+class SeekerSkillSetsController < ApplicationController
+end

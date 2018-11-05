@@ -1,0 +1,2 @@
+class JobPostActivitiesController < ApplicationController
+end

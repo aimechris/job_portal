@@ -1,0 +1,2 @@
+class BusinessStreamsController < ApplicationController
+end

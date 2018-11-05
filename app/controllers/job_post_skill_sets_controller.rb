@@ -1,0 +1,2 @@
+class JobPostSkillSetsController < ApplicationController
+end
