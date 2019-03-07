@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  root to: 'pages#index'
   # User
   devise_for :user_accounts
   resources :user_types
   ###############
   # -----------------
+  
+  get 'jobs/search', to: 'jobposts#search'
   #------------------
   # Company Profile
   resources :business_stream

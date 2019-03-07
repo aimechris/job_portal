@@ -1,0 +1,11 @@
+<%= simple_form_for @job_post do |f| %>
+  <%= f.input :title, label: "Job Post Title" %>
+  <%= f.input :posted_by_id %>
+  <%= f.input :job_type %>
+  <%= f.input :company %>
+  <%= f.input :is_company_name_hidden %>
+  <%= f.input :created_date %>
+  <%= f.input :job_description %>
+  <%= f.input :job_location %>
+  <%= f.input :is_active %>
+<% end %>

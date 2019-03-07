@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181101162009) do
+ActiveRecord::Schema.define(version: 20181222090721) do
 
   create_table "business_streams", force: :cascade do |t|
     t.string "business_stream_name", limit: 100
@@ -33,6 +33,10 @@ ActiveRecord::Schema.define(version: 20181101162009) do
     t.integer "company_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "company_image_file_name"
+    t.string "company_image_content_type"
+    t.integer "company_image_file_size"
+    t.datetime "company_image_updated_at"
     t.index ["company_id"], name: "index_company_images_on_company_id"
   end
 
@@ -169,6 +173,14 @@ ActiveRecord::Schema.define(version: 20181101162009) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar_file_name"
+    t.string "avatar_content_type"
+    t.integer "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.string "user_image_file_name"
+    t.string "user_image_content_type"
+    t.integer "user_image_file_size"
+    t.datetime "user_image_updated_at"
     t.index ["confirmation_token"], name: "index_user_accounts_on_confirmation_token", unique: true
     t.index ["email"], name: "index_user_accounts_on_email", unique: true
     t.index ["reset_password_token"], name: "index_user_accounts_on_reset_password_token", unique: true

@@ -10,9 +10,9 @@ class UserAccount::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+   @user_account = UserAccount.create( user_account_params)
+  end
 
   # GET /resource/edit
   # def edit
@@ -28,7 +28,10 @@ class UserAccount::RegistrationsController < Devise::RegistrationsController
   # def destroy
   #   super
   # end
-
+  private
+    def user_account_params
+      params.require(:user_account).permit(:user_image)
+    end
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
   # in to be expired now. This is useful if the user wants to
