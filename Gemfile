@@ -16,6 +16,7 @@ gem 'simple_form'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass'
+gem 'font-awesome-rails'
 gem 'jquery-rails'
 # Image Processing
 gem "paperclip", "~> 6.0.0"
