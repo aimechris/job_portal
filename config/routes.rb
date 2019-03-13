@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   root to: 'pages#index'
   # User
-  devise_for :user_accounts
+  devise_for :user_accounts, path: 'users'
+  # devise_for :admins, path: 'admins', controllers: { sessions: "admins/sessions" }
+  devise_for :admins, path: 'admins'
   resources :user_types
   ###############
   # -----------------
-  
+
   get 'jobs/search', to: 'jobposts#search'
   #------------------
   # Company Profile
