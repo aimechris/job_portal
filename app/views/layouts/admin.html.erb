@@ -10,6 +10,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="skin-yellow sidebar-mini">
+    <div class="wrapper">
+      <%= yield %>
+    </div>
   </body>
 </html>

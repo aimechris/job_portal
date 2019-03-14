@@ -1,4 +1,5 @@
 class JobPostsController < ApplicationController
+  layout 'user'
   def index
     @job_posts = JobPost.all.order("created_at DESC")
     render index

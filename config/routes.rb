@@ -1,7 +1,20 @@
 Rails.application.routes.draw do
   root to: 'pages#index'
   # User
-  devise_for :user_accounts, path: 'users'
+  devise_for :user_accounts,
+    path: 'user',
+    :path_names => {
+      :sign_in => 'login',
+      :sign_out => 'logout',
+      :password => 'secret',
+      :confirmation => 'verification',
+      :unlock => 'unblock',
+      :sign_up => 'register'
+    },
+    controllers: {
+      sessions: "user_account/sessions",
+      registrations: "user_account/registrations"
+    }
   # devise_for :admins, path: 'admins', controllers: { sessions: "admins/sessions" }
   devise_for :admins, path: 'admins'
   resources :user_types
