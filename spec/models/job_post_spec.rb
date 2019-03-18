@@ -11,6 +11,7 @@ RSpec.describe JobPost, type: :model do
   it { should validate_presence_of (:posted_by_id) }
   it { should validate_presence_of (:is_company_name_hidden) }
   it { should validate_presence_of (:created_date)}
+  it { should validate_presence_of (:job_title)}
   it { should validate_presence_of (:job_description)}
   it { should validate_presence_of (:is_active)}
 end

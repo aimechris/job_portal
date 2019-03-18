@@ -1,5 +1,6 @@
 class CompaniesController < ApplicationController
   #before_action :find_company, only:[:show]
+  layout 'user'
   def index
     @companies = Company.All
   end

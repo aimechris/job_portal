@@ -1,4 +1,5 @@
 class SeekerProfilesController < ApplicationController
+  layout 'user'
   def index
     @seeker_profiles = Seekerprofile.all
   end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190311142833) do
+ActiveRecord::Schema.define(version: 20190318062306) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -127,6 +127,7 @@ ActiveRecord::Schema.define(version: 20190311142833) do
     t.string "is_active", limit: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "job_title"
     t.index ["company_id"], name: "index_job_posts_on_company_id"
     t.index ["job_location_id"], name: "index_job_posts_on_job_location_id"
     t.index ["job_type_id"], name: "index_job_posts_on_job_type_id"

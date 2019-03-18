@@ -19,6 +19,8 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
+# WYSIGWYG Editor
+gem 'tinymce-rails'
 # Image Processing
 gem "paperclip", "~> 6.0.0"
 # Pagination

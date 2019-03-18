@@ -12,7 +12,10 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require tinymce
 //= require_tree .
 //= require jquery
+//= require jquery_ujs
+//= require bootstrap
 //= require bootstrap-sprockets
 //= require adminlte

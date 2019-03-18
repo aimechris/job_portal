@@ -1,2 +1,23 @@
-<h1>Seeker Profile</h1>
-<%= render 'form' %>
+<body class="skin-yellow">
+  <div class="wrapper">
+    <%= render './layouts/userheader' %>
+    <%= render './layouts/usersidebar' %>
+    <div class="content-wrapper">
+      <section class="content-header">
+        <h5><b>Employee Profile<b></h5>
+      </section>
+      <section class="content">
+        <div class="row">
+          <div class="">
+            <button type="button" name="button">Delete your Profile</button>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-6">
+            <%= render 'form' %>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>

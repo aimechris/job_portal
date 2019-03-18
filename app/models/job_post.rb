@@ -7,4 +7,6 @@ class JobPost < ApplicationRecord
   belongs_to :company
 
   validates_presence_of :posted_by_id, :is_company_name_hidden, :created_date, :job_description, :is_active
+  accepts_nested_attributes_for :job_post_activities
+  accepts_nested_attributes_for :job_post_skill_sets
 end

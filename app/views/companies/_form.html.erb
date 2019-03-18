@@ -1,8 +1,8 @@
 <%= simple_form_for @company do |f| %>
   <%= select_tag(:business_stream_id, options_for_select(@business_streams), :prompt => "Select Industry") %>
   <%= f.input :company_name, label: "Company Name" %>
-  <%= f.input :profile_description %>
+  <%= f.input :profile_description, class: "tinymce"%>
   <%= f.input :establishment_date %>
-  <%= f.input :company_website_url %>
-  <%= f.button :submit %>
+  <%= f.input :company_website_url %>s
+  <%= f.button :submit, label: "Update" %>
 <% end %>
